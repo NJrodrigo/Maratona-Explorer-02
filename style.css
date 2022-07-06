@@ -1,0 +1,133 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+html {
+  --bg-color: white;
+  --text-color: #00082f;
+  --bnt-color: #4263eb;
+  --bnt-color-shadow: #364fc7;
+  --bnt-text-color: #eee;
+  --bg-sec-color: #eee;
+}
+/* Temas da Page */
+body.dark-blue {
+  --bnt-color: #4263eb;
+  --bnt-color-shadow: #364fc7;
+  --text-color: #eee;
+  --bg-color: #040c35;
+  --bg-sec-color: #000c4b;
+}
+body.pink {
+  --bnt-text-color: #040920;
+  --bnt-color: #d633c6;
+  --bnt-color-shadow: #a61ed4;
+  --text-color: #040920;
+  --bg-color: #5521a8;
+  --bg-sec-color: #5a15c9ce;
+}
+body.green {
+  --bnt-color: #4e9363;
+  --bnt-color-shadow: #3c6c54;
+  --bnt-text-color: #080912;
+  --text-color: #0b0d19;
+  --bg-color: #1d3d37;
+  --bg-sec-color: #2c5049;
+}
+body.red {
+  --bnt-color: #e36464;
+  --bnt-color-shadow: #cb5252;
+  --bg-color: #8b1d1d;
+  --text-color: #241127;
+  --bnt-text-color: #b61b1d;
+  --bg-sec-color: #b13b3b;
+}
+body.gray {
+  --bnt-color: #a9bcbf;
+  --bnt-color-shadow: #809aa3;
+  --bnt-text-color: #22222f;
+  --text-color: #22222f;
+  --bg-color: #51737e;
+  --bg-sec-color: #648590;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+/* Fim temas page */
+/* div que controla a posiçao */
+.conteiner {
+  background-color: var(--bg-sec-color);
+  text-align: center;
+  width: 40vw;
+  height: 90vh;
+  margin: 25px auto;
+}
+
+/* imagem */
+
+img {
+  image-rendering: pixelated;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid var(--bnt-color) 0.3em;
+  margin: 4px;
+  padding: 4px;
+}
+/*estilizaçao texto*/
+h1 {
+  margin: 4px 0px 8px 0px;
+  font: 'roboto nono';
+  font-size: 1.2rem;
+}
+ul {
+  list-style: none;
+  margin: 6vh auto;
+}
+ul li a {
+  /* --posiçoa--- */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  width: 50%;
+  /* --estilo-- */
+  font-weight: 600;
+  background-color: var(--bnt-color);
+  margin: 16px auto;
+  border-radius: 6px;
+  transition: background 600ms;
+  transition: color 400ms;
+  text-decoration: none;
+  color: var(--bnt-text-color);
+}
+ul li a:hover {
+  background-color: var(--bnt-color-shadow);
+  color: rgb(204, 204, 204);
+}
+/* rodape */
+footer {
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 400ms;
+}
+footer:hover {
+  opacity: 1;
+}
+
+/* Tela */
+@media (max-width: 720px) {
+  ul li a {
+    height: 50px;
+    width: 70%;
+  }
+  .conteiner {
+    width: 70vw;
+    height: 95vh;
+  }
+}
